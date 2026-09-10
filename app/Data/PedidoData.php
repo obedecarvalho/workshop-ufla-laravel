@@ -30,7 +30,7 @@ final readonly class PedidoData
             clienteId: (int) $dados['cliente_id'],
             canal: CanalPedido::from((string) $dados['canal']),
             itens: array_values(array_map(
-                static fn (array $item): ItemData => ItemData::fromArray($item),
+                ItemData::fromArray($item),
                 $itens,
             )),
             observacao: isset($dados['observacao']) ? (string) $dados['observacao'] : null,

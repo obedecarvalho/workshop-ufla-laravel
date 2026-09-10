@@ -20,6 +20,7 @@ return RectorConfig::configure()
     )
     ->withSkip([
         __DIR__.'/app/Filament',
+        __DIR__.'/app/Policies',
         __DIR__.'/bootstrap/cache',
     ]);
 

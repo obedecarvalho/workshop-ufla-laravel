@@ -8,10 +8,10 @@ use App\Models\Pedido;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Queue\SerializesModels;
 
-final class PedidoCriado
+final readonly class PedidoCriado
 {
     use Dispatchable;
     use SerializesModels;
 
-    public function __construct(public readonly Pedido $pedido) {}
+    public function __construct(public Pedido $pedido) {}
 }
