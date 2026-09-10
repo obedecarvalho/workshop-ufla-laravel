@@ -20,6 +20,7 @@ use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Filters\SelectFilter;
 use Filament\Tables\Table;
+use Illuminate\Database\Eloquent\Builder;
 
 /**
  * Resource em arquivo único, para contraste com o ClienteResource.
@@ -116,7 +117,7 @@ final class PedidoResource extends Resource
      * Eager loading no ponto de entrada da listagem: sem isso, cada linha
      * dispara uma consulta para buscar o cliente.
      */
-    public static function getEloquentQuery(): \Illuminate\Database\Eloquent\Builder
+    public static function getEloquentQuery(): Builder
     {
         return parent::getEloquentQuery()->with('cliente');
     }

@@ -1,6 +1,8 @@
 <?php
 
 declare(strict_types=1);
+use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Support\Facades\DB;
 
 /*
 |--------------------------------------------------------------------------
@@ -45,10 +47,10 @@ arch('models não vazam para o controller')
 
 arch('jobs implementam ShouldQueue')
     ->expect('App\Jobs')
-    ->toImplement(Illuminate\Contracts\Queue\ShouldQueue::class);
+    ->toImplement(ShouldQueue::class);
 
 arch('nada de facade de banco fora da camada de aplicação')
-    ->expect(Illuminate\Support\Facades\DB::class)
+    ->expect(DB::class)
     ->not->toBeUsedIn(['App\Http\Controllers', 'App\Filament']);
 
 arch('presets do Laravel')

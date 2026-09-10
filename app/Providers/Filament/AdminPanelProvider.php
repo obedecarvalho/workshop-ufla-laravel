@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Providers\Filament;
 
+use Filament\Contracts\Plugin;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\AuthenticateSession;
 use Filament\Http\Middleware\DisableBladeIconComponents;
@@ -52,7 +53,7 @@ final class AdminPanelProvider extends PanelProvider
      * Os plugins abaixo transformam o painel em console de operação.
      * Descomente conforme instalar cada pacote.
      *
-     * @return array<int, \Filament\Contracts\Plugin>
+     * @return array<int, Plugin>
      */
     private function plugins(): array
     {

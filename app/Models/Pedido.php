@@ -7,6 +7,7 @@ namespace App\Models;
 use App\Enums\CanalPedido;
 use App\Enums\StatusPedido;
 use Database\Factories\PedidoFactory;
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -20,7 +21,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
  * @property int $total_em_centavos
  * @property string|null $observacao
  * @property-read Cliente $cliente
- * @property-read \Illuminate\Database\Eloquent\Collection<int, ItemPedido> $itens
+ * @property-read Collection<int, ItemPedido> $itens
  */
 final class Pedido extends Model
 {

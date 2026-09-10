@@ -9,7 +9,7 @@ use App\Enums\CanalPedido;
 final readonly class PedidoData
 {
     /**
-     * @param  list<ItemData>  $itens
+     * @param list<ItemData> $itens
      */
     public function __construct(
         public int $clienteId,
@@ -19,7 +19,7 @@ final readonly class PedidoData
     ) {}
 
     /**
-     * @param  array<string, mixed>  $dados
+     * @param array<string, mixed> $dados
      */
     public static function fromArray(array $dados): self
     {

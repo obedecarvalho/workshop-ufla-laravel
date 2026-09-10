@@ -17,7 +17,7 @@ use App\Models\Produto;
 final readonly class ReservaEstoque
 {
     /**
-     * @param  list<ItemData>  $itens
+     * @param list<ItemData> $itens
      *
      * @throws EstoqueInsuficienteException
      */
@@ -41,7 +41,7 @@ final readonly class ReservaEstoque
     }
 
     /**
-     * @param  list<ItemData>  $itens
+     * @param list<ItemData> $itens
      */
     public function devolver(array $itens): void
     {

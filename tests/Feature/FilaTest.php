@@ -20,7 +20,7 @@ it('enfileira a nota fiscal na fila fiscal', function (): void {
 
     $pedido = Pedido::factory()->create();
 
-    (new DespacharEfeitosDoPedido())->handle(new PedidoCriado($pedido));
+    (new DespacharEfeitosDoPedido)->handle(new PedidoCriado($pedido));
 
     Queue::assertPushedOn('fiscal', GerarNotaFiscal::class);
 });
@@ -30,7 +30,7 @@ it('enfileira a notificação do cliente', function (): void {
 
     $pedido = Pedido::factory()->create();
 
-    (new DespacharEfeitosDoPedido())->handle(new PedidoCriado($pedido));
+    (new DespacharEfeitosDoPedido)->handle(new PedidoCriado($pedido));
 
     Queue::assertPushed(NotificarCliente::class);
 });

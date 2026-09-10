@@ -17,7 +17,7 @@ final readonly class ItemData
     ) {}
 
     /**
-     * @param  array<string, int|string>  $dados
+     * @param array<string, int|string> $dados
      */
     public static function fromArray(array $dados): self
     {

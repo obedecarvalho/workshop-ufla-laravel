@@ -6,10 +6,10 @@ use Rector\Config\RectorConfig;
 
 return RectorConfig::configure()
     ->withPaths([
-        __DIR__ . '/app',
-        __DIR__ . '/database',
-        __DIR__ . '/routes',
-        __DIR__ . '/tests',
+        __DIR__.'/app',
+        __DIR__.'/database',
+        __DIR__.'/routes',
+        __DIR__.'/tests',
     ])
     ->withPhpSets(php83: true)
     ->withPreparedSets(
@@ -19,8 +19,8 @@ return RectorConfig::configure()
         earlyReturn: true,
     )
     ->withSkip([
-        __DIR__ . '/app/Filament',
-        __DIR__ . '/bootstrap/cache',
+        __DIR__.'/app/Filament',
+        __DIR__.'/bootstrap/cache',
     ]);
 
 // Para migrações do Filament v3 -> v4 existe um conjunto de regras próprio:
