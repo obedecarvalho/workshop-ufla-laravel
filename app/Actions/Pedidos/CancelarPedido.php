@@ -25,7 +25,7 @@ final readonly class CancelarPedido
         }
 
         return DB::transaction(function () use ($pedido): Pedido {
-            $this->estoque->devolver($pedido->itens);
+            $this->estoque->devolverDoPedido($pedido);
 
             $pedido->update(['status' => StatusPedido::Cancelado]);
 

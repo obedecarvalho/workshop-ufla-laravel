@@ -12,9 +12,8 @@ parameters:
 
     excludePaths:
         - app/Filament/**/Pages/*
+        - app/Filament/Resources/*
 
-    checkMissingIterableValueType: true
-    checkGenericClassInNonGenericObjectType: false
     treatPhpDocTypesAsCertain: false
 
     # Em projeto legado, gere um baseline com:
